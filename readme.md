@@ -45,7 +45,7 @@ Para ver el historial utilizamos el comando
 ### Mi app está saturada, necesito mas máquinas
 `kubectl scale deployment deploy-nodejs --replicas=5`
 
-Ya pero no quiero estar haciendolo a mano
+Ya, pero no quiero estar haciendolo a mano
 
 `kubectl autoscale deployment deploy-nodejs --min=3 --max=5 --cpu-percent=70`
 
@@ -53,3 +53,6 @@ Ya pero no quiero estar haciendolo a mano
 
 ### Perfecto, todo es muy automático pero ¿cómo defino donde tiene que atacar mi app?
 puedes utilizar el name de cada resource y el dns interno del cluster lo resolverá, por ejemplo usar dbmysql en el host de nuestra app
+
+### Presentación:
+https://docs.google.com/presentation/d/1hATDUbYoIv-VVzplN5__sGo_aDnn2RtI7j8Bb-d4lgE/edit?usp=sharing
