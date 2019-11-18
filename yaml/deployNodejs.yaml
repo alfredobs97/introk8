@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-nodejs
+spec:
+  revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+  replicas: 3
+  selector:
+    matchLabels:
+      name: nodejs
+  template:    
+    metadata:
+      labels:
+        app: appV1
+        name: nodejs
+    spec:
+      containers:
+      - name:  nodejs
+        image: alfredobs97/minodejskubernetes:v1.1
+        ports:
+        - containerPort : 8080
+        volumeMounts:
+        - name: data
+          mountPath: /data
+      volumes:
+      - name: data
+        emptyDir: {}
+    
