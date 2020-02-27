@@ -55,4 +55,10 @@ Ya, pero no quiero estar haciendolo a mano
 puedes utilizar el name de cada resource y el dns interno del cluster lo resolverá, por ejemplo usar dbmysql en el host de nuestra app
 
 ### Presentación:
+Parte 1:
+
 https://docs.google.com/presentation/d/1hATDUbYoIv-VVzplN5__sGo_aDnn2RtI7j8Bb-d4lgE/edit?usp=sharing
+
+Parte 2: 
+
+https://docs.google.com/presentation/d/12anWbvIMVbDN0Xfg_3DuCfwj8lyzUATmWKoN5aGNEs4/edit?usp=sharing
