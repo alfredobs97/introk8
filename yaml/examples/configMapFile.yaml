@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  .env: |-
+    #
+    # MySQL DATABASE
+    #
+    TYPEORM_CONNECTION=mysql
+    TYPEORM_HOST=db
+    TYPEORM_PORT=3306
+    TYPEORM_USERNAME=root
+    TYPEORM_PASSWORD=toor
+    TYPEORM_DATABASE=PCFUTBOL
+    TYPEORM_SYNCHRONIZE=false
+    TYPEORM_LOGGING=error
+    TYPEORM_LOGGER=advanced-console
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: my-env

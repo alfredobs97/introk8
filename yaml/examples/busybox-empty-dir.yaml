@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: busybox
+  name: busybox-empty-dir
+spec:
+  volumes:
+  - name: my-empty-dir
+    emptyDir: {}
+  containers:
+  - image: vtuson/busybox
+    name: busybox-1
+    volumeMounts:
+      - mountPath: /empty
+        name: my-empty-dir
+    command: ["sleep" , "3600"]
+  - image: vtuson/busybox
+    name: busybox-2
+    volumeMounts:
+      - mountPath: /volume
+        name: my-empty-dir
+    command: ["sleep" , "3600"]

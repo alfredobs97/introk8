@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  clave: valor
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: my-config

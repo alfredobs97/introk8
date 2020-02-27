@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: busybox
+  name: busybox-host-path
+spec:
+  volumes:
+  - name: my-host-path
+    hostPath:
+        path: /volumes
+  containers:
+  - image: vtuson/busybox
+    name: busybox-1
+    volumeMounts:
+      - mountPath: /share
+        name: my-host-path
+    command: ["sleep" , "3600"]
+  - image: vtuson/busybox
+    name: busybox-2
+    volumeMounts:
+      - mountPath: /share
+        name: my-host-path
+    command: ["sleep" , "3600"]

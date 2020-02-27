@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  TYPEORM_CONNECTION: mysql
+  TYPEORM_DATABASE: PCFUTBOL
+  TYPEORM_HOST: db
+  TYPEORM_LOGGER: advanced-console
+  TYPEORM_LOGGING: error
+  TYPEORM_PASSWORD: toor
+  TYPEORM_PORT: "3306"
+  TYPEORM_SYNCHRONIZE: "false"
+  TYPEORM_USERNAME: root
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: my-env
